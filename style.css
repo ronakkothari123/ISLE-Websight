@@ -11,6 +11,10 @@ body{
     margin:0;
 }
 
+#mobile-wrapper{
+    display:none;
+}
+
 #desktop-navbar{
     position:sticky;
     top:0;
@@ -229,4 +233,62 @@ body{
 
 .accent{
     color:var(--accent-color)
+}
+
+@media(max-width:480px){
+    body{
+        overflow:hidden;
+        background:white;
+    }
+
+    #desktop-wrapper{
+        display:none;
+    }
+
+    #mobile-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    #mobile-background{
+        background-image:url('https://media.team254.com/2019/11/9a1107f2-1.jpg');
+        opacity:0.6;
+        background-size:cover;
+        background-position:center;
+        position:absolute;
+        z-index:-1;
+        width:100vw;
+        height:100vh;
+        filter:blur(5px);
+    }
+
+    #mobile-navbar{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100vw;
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        align-items:center;
+        background:white;
+        border-radius:0 0 2.5vmin 2.5vmin;
+    }
+
+    #mobile-navbar > *{
+        filter:brightness(0);
+    }
+
+    #mobile-navbar > img{
+        height:10vmin;
+    }
+
+    #mobile-navbar > h1{
+        font-weight:900;
+        font-size:10vmin;
+        margin: 10px 0 10px 10px;
+    }
 }
