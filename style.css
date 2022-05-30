@@ -15,7 +15,7 @@ body{
     position:sticky;
     top:0;
     width:100vw;
-    height:75px;
+    height:85px;
     display:flex;
     flex-direction:row;
     justify-content:center;
@@ -99,11 +99,13 @@ body{
     color:white;
     font-size:16px;
     font-weight:lighter;
-    padding:10px 25px;
-    border-radius:15px;
+    padding:12px 25px;
+    border-radius:5px;
     cursor:pointer;
     box-shadow:0 0 0 0 var(--accent-color);
     transition-duration:500ms;
+    text-shadow:0 0 5px;
+    text-transform:uppercase;
 }
 
 #desktop-navbar-join:hover{
@@ -156,13 +158,19 @@ body{
     background:var(--accent-color);
     outline:none;
     border:none;
-    margin-top:10px;
+    margin-top:25px;
     width:35vw;
-    height:30px;
+    height:40px;
     font-size:16px;
     font-weight:lighter;
     border-radius:10px;
     cursor:pointer;
+    text-shadow:0 0 5px;
+    transition-duration:250ms;
+}
+
+#desktop-main-text > button:hover{
+    box-shadow:0 0 15px 0 gray;
 }
 
 #desktop-main-img{
