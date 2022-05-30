@@ -1,0 +1,224 @@
+:root{
+    --accent-color:#4472c4;
+    --bg-color-1:#fff;
+    --bg-color-2:#f6f7fb;
+}
+
+body{
+    font-family:'Montserrat', sans-serif;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    margin:0;
+}
+
+#desktop-navbar{
+    position:sticky;
+    top:0;
+    width:100vw;
+    height:75px;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    transition-duration:250ms;
+    z-index:1;
+}
+
+#desktop-navbar-header{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+
+#desktop-navbar-header > img{
+    height:50px;
+    margin-right:5px;
+}
+
+#desktop-navbar-header-text > h1{
+    margin:0;
+    font-size:30px;
+    text-transform:uppercase;
+}
+
+#desktop-navbar-header-text > p{
+    margin:0;
+    font-size:11px;
+}
+
+#desktop-navbar-links{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    margin-right:150px;
+    margin-left:150px;
+    gap:30px;
+    padding:0;
+}
+
+.desktop-navbar-link{
+    text-decoration:none;
+    transition-duration:250ms;
+    font-weight:500;
+    font-size:14px;
+    color:gray;
+    width:80px;
+    text-align:center;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    position:relative;
+}
+
+.desktop-navbar-link::before{
+    content:'';
+    position:absolute;
+    width:0;
+    bottom:-3px;
+    height:1px;
+    left:40px;
+    transition-duration:250ms;
+}
+
+.desktop-navbar-link:hover::before{
+    content:'';
+    left:0;
+    width:80px;
+    background:black;
+}
+
+.desktop-navbar-link:hover{
+    color:black;
+}
+
+#desktop-navbar-join{
+    background:var(--accent-color);
+    border:none;
+    outline:none;
+    color:white;
+    font-size:16px;
+    font-weight:lighter;
+    padding:10px 25px;
+    border-radius:15px;
+    cursor:pointer;
+    box-shadow:0 0 0 0 var(--accent-color);
+    transition-duration:500ms;
+}
+
+#desktop-navbar-join:hover{
+    box-shadow:0 5px 5px 0 var(--accent-color);
+    transform:translateY(-5px);
+    transition-duration:250ms;
+}
+
+#desktop-navbar-join:active{
+    box-shadow:0 0 0 0 var(--accent-color);
+    transform:translateY(0);
+}
+
+#desktop-main{
+    height:85vh;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+    position:absolute;
+    top:0;
+    width:100vw;
+}
+
+#desktop-main > div{
+    width:35vw;
+}
+
+#desktop-main-text > h2{
+    font-size:22px;
+    text-shadow: 0 0 5px;
+    margin:0;
+}
+
+#desktop-main-text > h1{
+    font-size:46px;
+    margin:10px 0 25px 0;
+    text-shadow: 0 0 5px;
+    font-weight:900;
+}
+
+#desktop-main-text > p{
+    color:gray;
+    margin:0;
+    font-size:14px;
+}
+
+#desktop-main-text > button{
+    color:white;
+    background:var(--accent-color);
+    outline:none;
+    border:none;
+    margin-top:10px;
+    width:35vw;
+    height:30px;
+    font-size:16px;
+    font-weight:lighter;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+#desktop-main-img{
+    background-image:url("https://images.squarespace-cdn.com/content/v1/545c6f76e4b073a05b484376/1524155202583-OJI6WKT33YJVAMCDRTXU/Bubbles+CVR.png");
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:60%;
+    height:30vw;
+}
+
+#desktop-main-color {
+    position: absolute;
+    top: -15vh;
+    left: -10vw;
+    background: var(--accent-color);
+    opacity: 0.25;
+    width: 50vw;
+    height: 50vh;
+    border-radius: 40%;
+    transform: rotate(-15deg);
+    box-shadow:0 0 25px 0 var(--accent-color);
+    z-index:-1;
+}
+
+
+#desktop-sponsors{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    gap:35px;
+    background:var(--bg-color-2);
+    position:absolute;
+    top:85vh;
+    height:15vh;
+    width:100vw;
+}
+
+.desktop-sponsor{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+
+.desktop-sponsor > img{
+    height:3.5vh;
+    filter:brightness(0) invert(0.75);
+}
+
+.desktop-sponsor > h1{
+    font-size:2vh;
+    margin-left:10px;
+    color: #bfbfbf;
+    font-weight:400;
+}
+
+.accent{
+    color:var(--accent-color)
+}
